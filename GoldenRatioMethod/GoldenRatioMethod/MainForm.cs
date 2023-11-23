@@ -27,13 +27,20 @@ namespace GoldenRatioMethod
 
     private void SetAccuracy()
     {
-      double Accuracy = Math.Log10(Precision) * -1.0;
-      AccuracyForView = Convert.ToInt32(Accuracy);
-      if (AccuracyForView < 0)
+      try
       {
-        AccuracyForView = 0;
+        double Accuracy = Math.Log10(Precision) * -1.0;
+        AccuracyForView = Convert.ToInt32(Accuracy);
+        if (AccuracyForView < 0)
+        {
+          AccuracyForView = 0;
+        }
+        Console.WriteLine("Точность - " + AccuracyForView);
       }
-      Console.WriteLine("Точность - " + AccuracyForView);
+      catch 
+      {
+        ex.showPrecisionError2();
+      }
     }
 
     private void LableClear()
@@ -44,11 +51,49 @@ namespace GoldenRatioMethod
       textBox8.Text = "";
     }
 
+    private void OffAllResults()
+    {
+      PointViewOff();
+      ExtremumViewOff();
+    }
+
+    private void PointViewOff()
+    {
+      label5.Visible = false;
+      label9.Visible = false;
+      textBox4.Visible = false;
+      textBox8.Visible = false;
+    }
+
+    private void PointViewOn()
+    {
+      label5.Visible = true;
+      label9.Visible = true;
+      textBox4.Visible = true;
+      textBox8.Visible = true;
+    }
+
+    private void ExtremumViewOff()
+    {
+      label6.Visible = false;
+      label7.Visible = false;
+      textBox5.Visible = false;
+      textBox6.Visible = false;
+    }
+
+    private void ExtremumViewOn()
+    {
+      label6.Visible = true;
+      label7.Visible = true;
+      textBox5.Visible = true;
+      textBox6.Visible = true;
+    }
+
     private double newtons(CalculateFunction func, DerivFunction derv)
     {
       double x0, xn,  xnp1;
       x0 = RestrictionEnd;
-      xn = x0 - (func.getFunction(x0)/ derv.getDeriv(x0));
+      xn = x0 - (func.getFunction(x0) / derv.getDeriv(x0));
       xnp1 = xn - (func.getFunction(xn) / derv.getDeriv(xn));
 
       while (xn - xnp1 >= Precision)
@@ -251,22 +296,28 @@ namespace GoldenRatioMethod
       {
         ex.showRestrictionsError();
       }
+      OffAllResults();
       LableClear();
       SetAccuracy();
       switch (MethodsKey)
       {
         case 1:
+          PointViewOn();
           FindIntersectionPointsDichotomy();
           break;
         case 2:
+          PointViewOn();
+          ExtremumViewOn();
           FindIntersectionPointsGolden();
           FindTheMinimumGolden();
           FindTheMaximumGolden();
           break;
         case 3:
+          PointViewOn();
           FindIntersectionPointsHewton();
           break;
         case 4:
+          ExtremumViewOn();
           FindTheMinimumCoordinateMethod();
           FindTheMaximumCoordinateMethod();
           break;
@@ -313,6 +364,20 @@ namespace GoldenRatioMethod
     {
       MethodsKey = 4;
       label11.Text = "Координатный спуск";
+    }
+
+    private void сортировкиToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Sorting SortingForm = new Sorting(this);
+      this.Hide();
+      SortingForm.Show();
+    }
+
+    private void нахождениеЛогарифмаToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      FindIntegral FindIntegral = new FindIntegral(this);
+      this.Hide();
+      FindIntegral.Show();
     }
 
     private void label2_Click(object sender, EventArgs e)

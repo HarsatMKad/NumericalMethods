@@ -13,6 +13,8 @@ namespace GoldenRatioMethod
     private string DataEntryError = "Данные введены в неверном формате";
     private string RestrictionsError = "Начальная точка должна быть меньше конечной";
     private string SelectedMethodError = "Метод не выбран";
+    private string PrecisionError2 = "Неудалось преобразовать точность";
+    private string CoefficientError = "Неправильно задан коэффицент. Коэффицент будет задан по умолчанию";
 
     public void showPrecisionError()
     {
@@ -37,6 +39,14 @@ namespace GoldenRatioMethod
     public void showSelectedMethodError()
     {
       Console.WriteLine($"Ошибка: " + SelectedMethodError);
+    }
+    public void showPrecisionError2()
+    {
+      Console.WriteLine($"Ошибка: " + PrecisionError2);
+    }
+    public void showCoefficientError()
+    {
+      Console.WriteLine($"Ошибка: " + CoefficientError);
     }
   }
 }

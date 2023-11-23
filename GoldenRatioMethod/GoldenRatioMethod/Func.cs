@@ -77,4 +77,20 @@ namespace GoldenRatioMethod
       return ex.calculate();
     }
   }
+
+  class IntegralFunction : CalculateFunction
+  {
+    string StringFunction;
+
+    public IntegralFunction(string func)
+    {
+      this.StringFunction = func;
+    }
+
+    public double getIntegral(double a, double start, double end)
+    {
+      Expression ex = new Expression(a + " * int(" + StringFunction + ", x," + start + ", " + end + ")");
+      return ex.calculate();
+    }
+  }
 }

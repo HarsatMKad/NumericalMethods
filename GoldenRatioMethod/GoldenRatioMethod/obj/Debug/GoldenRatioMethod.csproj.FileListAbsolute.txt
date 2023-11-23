@@ -20,3 +20,5 @@ C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMeth
 C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.csproj.CopyComplete
 C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.exe
 C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.pdb
+C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.Sorting.resources
+C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.FindIntegral.resources
