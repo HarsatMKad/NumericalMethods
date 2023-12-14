@@ -398,6 +398,13 @@ namespace GoldenRatioMethod
       FindIntegral.Show();
     }
 
+    private void сЛАУToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      SLAE slae = new SLAE(this);
+      this.Hide();
+      slae.Show();
+    }
+
     private void label2_Click(object sender, EventArgs e)
     {
 

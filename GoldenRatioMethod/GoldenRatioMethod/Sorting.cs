@@ -498,5 +498,12 @@ namespace GoldenRatioMethod
       FindIntegral FindIntegral = new FindIntegral(mainform);
       FindIntegral.Show();
     }
+
+    private void сЛАУToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      this.Close();
+      SLAE slae = new SLAE(mainform);
+      slae.Show();
+    }
   }
 }

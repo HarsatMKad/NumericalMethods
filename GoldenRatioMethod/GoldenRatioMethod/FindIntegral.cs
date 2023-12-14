@@ -153,7 +153,6 @@ namespace GoldenRatioMethod
       }
 
       double result = h * sum;
-      Console.WriteLine(result);
       return result;
     }
 
@@ -175,7 +174,6 @@ namespace GoldenRatioMethod
       double start = RestrictionStart;
       double end = RestrictionEnd;
       double result = Rectangle(start, end, Splits);
-      Console.WriteLine(result);
 
       double roundResult = Math.Truncate(result * Math.Pow(10, AccuracyForView)) / Math.Pow(10, AccuracyForView);
       Console.WriteLine("Прямоугольники: " + roundResult);
@@ -195,7 +193,6 @@ namespace GoldenRatioMethod
 
     private double Simpson(double start, double end, double Splits)
     {
-      StandartFunction f = new StandartFunction(StringFunction);
       double sumST = Trapezoid(start,end, Splits);
       double sumST2 = Trapezoid(start, end, Splits * 2);
 
@@ -242,14 +239,17 @@ namespace GoldenRatioMethod
 
         Console.WriteLine("шаг: " + Splits + "    прямоугольники: " + roundSp + "     трапеции: " + roundSt + "      симпсон: " + roundSs);
 
-        label11.Text = roundSp.ToString();
-        label10.Text = roundSt.ToString();
-        label9.Text = roundSs.ToString();
+        textBox7.Text = roundSp.ToString();
+        textBox8.Text = roundSt.ToString();
+        textBox9.Text = roundSs.ToString();
         textBox6.Text = Splits.ToString();
         this.Update();
 
         if (roundSp == roundSt && roundSt == roundSs && roundSp == roundSs)
         {
+          textBox7.Text = roundSp.ToString();
+          textBox8.Text = roundSt.ToString();
+          textBox9.Text = roundSs.ToString();
           break;
         }
 
@@ -274,13 +274,6 @@ namespace GoldenRatioMethod
       Console.WriteLine("Идеал: " + ri + "\n");
     }
 
-    private void ClearViewResult()
-    {
-      label9.Text = "_____________";
-      label10.Text = "_____________";
-      label11.Text = "_____________";
-    }
-
     private void FindIntegral_Load(object sender, EventArgs e)
     {
 
@@ -297,6 +290,13 @@ namespace GoldenRatioMethod
       this.Close();
       Sorting sorting = new Sorting(mainform);
       sorting.Show();
+    }
+
+    private void ClearViewResult()
+    {
+      textBox7.Text = "";
+      textBox8.Text = "";
+      textBox9.Text = "";
     }
 
     private void очиститьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -324,6 +324,13 @@ namespace GoldenRatioMethod
         label14.Visible = true;
         this.Update();
       }
+    }
+
+    private void сЛАУToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      this.Close();
+      SLAE slae = new SLAE(mainform);
+      slae.Show();
     }
 
     private void рассчитатьToolStripMenuItem_Click(object sender, EventArgs e)

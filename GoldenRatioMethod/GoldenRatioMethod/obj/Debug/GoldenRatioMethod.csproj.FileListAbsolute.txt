@@ -22,3 +22,4 @@ C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMeth
 C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.pdb
 C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.Sorting.resources
 C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.FindIntegral.resources
+C:\Users\Harsat\source\repos\GoldenRatioMethod\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.SLAE.resources
