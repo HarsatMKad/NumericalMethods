@@ -18,6 +18,8 @@ namespace GoldenRatioMethod
     private string UncertaintyError = "Функция должна быть определена на промежутке";
     private string StepsError = "Количество шагов указано неверно";
     private string CountStepsError = "Введено некорректное количество шагов";
+    private string DimensionError = "Размерность матрицы указана неверно";
+
 
     public void showPrecisionError()
     {
@@ -65,6 +67,11 @@ namespace GoldenRatioMethod
     public void showCountStepsError()
     {
       Console.WriteLine($"Ошибка: " + CountStepsError);
+    }
+
+    public void showDimensionError()
+    {
+      Console.WriteLine($"Ошибка: " + DimensionError);
     }
   }
 }
