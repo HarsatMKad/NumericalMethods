@@ -56,12 +56,19 @@
       this.dataGridView1 = new System.Windows.Forms.DataGridView();
       this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
       this.label5 = new System.Windows.Forms.Label();
+      this.label6 = new System.Windows.Forms.Label();
+      this.panel3 = new System.Windows.Forms.Panel();
+      this.label7 = new System.Windows.Forms.Label();
+      this.textBox2 = new System.Windows.Forms.TextBox();
+      this.textBox3 = new System.Windows.Forms.TextBox();
+      this.textBox4 = new System.Windows.Forms.TextBox();
       this.menuStrip1.SuspendLayout();
       this.menuStrip2.SuspendLayout();
       this.panel1.SuspendLayout();
       this.panel2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+      this.panel3.SuspendLayout();
       this.SuspendLayout();
       // 
       // menuStrip1
@@ -158,23 +165,17 @@
       // 
       this.label1.AutoSize = true;
       this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label1.Location = new System.Drawing.Point(3, 3);
+      this.label1.Location = new System.Drawing.Point(66, 0);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(184, 31);
+      this.label1.Size = new System.Drawing.Size(246, 31);
       this.label1.TabIndex = 8;
-      this.label1.Text = "Матрица NxN";
+      this.label1.Text = "СЛАУ вида AX = B";
+      this.label1.Click += new System.EventHandler(this.label1_Click);
       // 
       // panel1
       // 
-      this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-      this.panel1.Controls.Add(this.button1);
-      this.panel1.Controls.Add(this.checkBox3);
-      this.panel1.Controls.Add(this.checkBox2);
-      this.panel1.Controls.Add(this.checkBox1);
-      this.panel1.Controls.Add(this.label4);
-      this.panel1.Controls.Add(this.label3);
-      this.panel1.Controls.Add(this.textBox1);
-      this.panel1.Controls.Add(this.label2);
+      this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+      this.panel1.Controls.Add(this.panel3);
       this.panel1.Controls.Add(this.label1);
       this.panel1.Location = new System.Drawing.Point(8, 37);
       this.panel1.Name = "panel1";
@@ -184,9 +185,9 @@
       // 
       // button1
       // 
-      this.button1.Location = new System.Drawing.Point(263, 62);
+      this.button1.Location = new System.Drawing.Point(262, 68);
       this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(69, 54);
+      this.button1.Size = new System.Drawing.Size(69, 42);
       this.button1.TabIndex = 19;
       this.button1.Text = "OK";
       this.button1.UseVisualStyleBackColor = true;
@@ -198,7 +199,7 @@
       this.checkBox3.Checked = true;
       this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
       this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.checkBox3.Location = new System.Drawing.Point(9, 135);
+      this.checkBox3.Location = new System.Drawing.Point(5, 95);
       this.checkBox3.Name = "checkBox3";
       this.checkBox3.Size = new System.Drawing.Size(69, 24);
       this.checkBox3.TabIndex = 18;
@@ -211,7 +212,7 @@
       this.checkBox2.Checked = true;
       this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
       this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.checkBox2.Location = new System.Drawing.Point(9, 105);
+      this.checkBox2.Location = new System.Drawing.Point(5, 65);
       this.checkBox2.Name = "checkBox2";
       this.checkBox2.Size = new System.Drawing.Size(134, 24);
       this.checkBox2.TabIndex = 17;
@@ -224,7 +225,7 @@
       this.checkBox1.Checked = true;
       this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
       this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.checkBox1.Location = new System.Drawing.Point(9, 75);
+      this.checkBox1.Location = new System.Drawing.Point(5, 35);
       this.checkBox1.Name = "checkBox1";
       this.checkBox1.Size = new System.Drawing.Size(94, 24);
       this.checkBox1.TabIndex = 16;
@@ -235,7 +236,7 @@
       // 
       this.label4.AutoSize = true;
       this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label4.Location = new System.Drawing.Point(59, 45);
+      this.label4.Location = new System.Drawing.Point(2, 7);
       this.label4.Name = "label4";
       this.label4.Size = new System.Drawing.Size(64, 20);
       this.label4.TabIndex = 15;
@@ -244,7 +245,7 @@
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(261, 3);
+      this.label3.Location = new System.Drawing.Point(178, 59);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(63, 13);
       this.label3.TabIndex = 14;
@@ -253,7 +254,7 @@
       // textBox1
       // 
       this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.textBox1.Location = new System.Drawing.Point(242, 19);
+      this.textBox1.Location = new System.Drawing.Point(241, 30);
       this.textBox1.Name = "textBox1";
       this.textBox1.Size = new System.Drawing.Size(104, 32);
       this.textBox1.TabIndex = 13;
@@ -263,15 +264,19 @@
       // 
       this.label2.AutoSize = true;
       this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label2.Location = new System.Drawing.Point(195, 22);
+      this.label2.Location = new System.Drawing.Point(194, 33);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(41, 26);
+      this.label2.Size = new System.Drawing.Size(47, 26);
       this.label2.TabIndex = 12;
-      this.label2.Text = "N=";
+      this.label2.Text = "N =";
       // 
       // panel2
       // 
       this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+      this.panel2.Controls.Add(this.textBox4);
+      this.panel2.Controls.Add(this.textBox3);
+      this.panel2.Controls.Add(this.textBox2);
+      this.panel2.Controls.Add(this.label7);
       this.panel2.Controls.Add(this.dataGridView2);
       this.panel2.Location = new System.Drawing.Point(8, 213);
       this.panel2.Name = "panel2";
@@ -285,9 +290,9 @@
             this.Column1,
             this.ГауссЖордан,
             this.Гаусс});
-      this.dataGridView2.Location = new System.Drawing.Point(4, 3);
+      this.dataGridView2.Location = new System.Drawing.Point(4, 52);
       this.dataGridView2.Name = "dataGridView2";
-      this.dataGridView2.Size = new System.Drawing.Size(356, 422);
+      this.dataGridView2.Size = new System.Drawing.Size(356, 373);
       this.dataGridView2.TabIndex = 0;
       // 
       // Column1
@@ -312,6 +317,7 @@
       this.dataGridView1.Name = "dataGridView1";
       this.dataGridView1.Size = new System.Drawing.Size(620, 605);
       this.dataGridView1.TabIndex = 12;
+      this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
       // 
       // openFileDialog1
       // 
@@ -322,11 +328,69 @@
       // 
       this.label5.AutoSize = true;
       this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label5.Location = new System.Drawing.Point(547, 9);
+      this.label5.Location = new System.Drawing.Point(429, 9);
       this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(185, 20);
+      this.label5.Size = new System.Drawing.Size(245, 20);
       this.label5.TabIndex = 13;
-      this.label5.Text = "aX1 + aX2 + ... + aXn = b";
+      this.label5.Text = "Коэффиценты A и значения B:";
+      // 
+      // label6
+      // 
+      this.label6.AutoSize = true;
+      this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.label6.Location = new System.Drawing.Point(160, 7);
+      this.label6.Name = "label6";
+      this.label6.Size = new System.Drawing.Size(200, 20);
+      this.label6.TabIndex = 20;
+      this.label6.Text = "Количество переменных:";
+      // 
+      // panel3
+      // 
+      this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+      this.panel3.Controls.Add(this.label6);
+      this.panel3.Controls.Add(this.button1);
+      this.panel3.Controls.Add(this.checkBox3);
+      this.panel3.Controls.Add(this.label3);
+      this.panel3.Controls.Add(this.checkBox2);
+      this.panel3.Controls.Add(this.textBox1);
+      this.panel3.Controls.Add(this.label4);
+      this.panel3.Controls.Add(this.label2);
+      this.panel3.Controls.Add(this.checkBox1);
+      this.panel3.Location = new System.Drawing.Point(0, 41);
+      this.panel3.Name = "panel3";
+      this.panel3.Size = new System.Drawing.Size(363, 129);
+      this.panel3.TabIndex = 21;
+      // 
+      // label7
+      // 
+      this.label7.AutoSize = true;
+      this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.label7.Location = new System.Drawing.Point(125, 3);
+      this.label7.Name = "label7";
+      this.label7.Size = new System.Drawing.Size(144, 20);
+      this.label7.TabIndex = 1;
+      this.label7.Text = "Время (итерации)";
+      // 
+      // textBox2
+      // 
+      this.textBox2.Location = new System.Drawing.Point(39, 26);
+      this.textBox2.Name = "textBox2";
+      this.textBox2.Size = new System.Drawing.Size(100, 20);
+      this.textBox2.TabIndex = 2;
+      // 
+      // textBox3
+      // 
+      this.textBox3.Location = new System.Drawing.Point(145, 26);
+      this.textBox3.Name = "textBox3";
+      this.textBox3.Size = new System.Drawing.Size(100, 20);
+      this.textBox3.TabIndex = 3;
+      // 
+      // textBox4
+      // 
+      this.textBox4.Location = new System.Drawing.Point(251, 26);
+      this.textBox4.Name = "textBox4";
+      this.textBox4.Size = new System.Drawing.Size(100, 20);
+      this.textBox4.TabIndex = 4;
       // 
       // SLAE
       // 
@@ -349,8 +413,11 @@
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
       this.panel2.ResumeLayout(false);
+      this.panel2.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+      this.panel3.ResumeLayout(false);
+      this.panel3.PerformLayout();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -385,6 +452,12 @@
     private System.Windows.Forms.DataGridViewTextBoxColumn ГауссЖордан;
     private System.Windows.Forms.DataGridViewTextBoxColumn Гаусс;
     private System.Windows.Forms.OpenFileDialog openFileDialog1;
+    private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Panel panel3;
+    private System.Windows.Forms.TextBox textBox4;
+    private System.Windows.Forms.TextBox textBox3;
+    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.Label label7;
   }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OfficeOpenXml;
 using System.IO;
+using org.mariuszgromada.math.mxparser;
+using System.Diagnostics;
 
 namespace GoldenRatioMethod
 {
@@ -68,6 +70,7 @@ namespace GoldenRatioMethod
 
     private void showConsoleMatrix()
     {
+      Console.WriteLine();
       for (int i = 0; i < N; ++i)
       {
         for (int j = 0; j < N + 1; ++j)
@@ -78,7 +81,6 @@ namespace GoldenRatioMethod
       }
       Console.WriteLine();
     }
-    
     private void GetExel()
     {
       double[,] excelTable;
@@ -185,11 +187,24 @@ namespace GoldenRatioMethod
       
     }
 
+    private void ClearTimer()
+    {
+      textBox2.Text = "";
+      textBox3.Text = "";
+      textBox4.Text = "";
+    }
+
     private void Cramer()
     {
       CramerMethod cm = new CramerMethod(Matrix, N);
+      Stopwatch stopwatch = new Stopwatch();
+
+      stopwatch.Start();
       double[] result = cm.Cramer();
+      stopwatch.Stop();
+
       FillAnswer(result, 0);
+      textBox2.Text = stopwatch.ElapsedTicks.ToString();
 
       Console.WriteLine("\n   Крамер");
       for (int i = 0; i < N; ++i)
@@ -201,8 +216,14 @@ namespace GoldenRatioMethod
     private void Gauss()
     {
       GaussMethod gm = new GaussMethod(Matrix, N);
+      Stopwatch stopwatch = new Stopwatch();
+
+      stopwatch.Start();
       double[] result = gm.Gauss();
+      stopwatch.Stop();
+
       FillAnswer(result, 2);
+      textBox4.Text = stopwatch.ElapsedTicks.ToString();
 
       Console.WriteLine("\n   Гаусс");
       for (int i = 0; i < N; ++i)
@@ -214,8 +235,14 @@ namespace GoldenRatioMethod
     private void GaussJordan()
     {
       GaussJordanMethod gjm = new GaussJordanMethod(Matrix, N);
+      Stopwatch stopwatch = new Stopwatch();
+
+      stopwatch.Start();
       double[] result = gjm.GaussJordan();
+      stopwatch.Stop();
+
       FillAnswer(result, 1);
+      textBox3.Text = stopwatch.ElapsedTicks.ToString();
 
       Console.WriteLine("\n   Гаусс-Жордан");
       for (int i = 0; i < N; ++i)
@@ -228,7 +255,7 @@ namespace GoldenRatioMethod
     {
       dataGridView1.RowCount = N;
       dataGridView1.ColumnCount = N + 1;
-      dataGridView1.TopLeftHeaderCell.Value = "Матрица " + N + "x" + N;
+      dataGridView2.RowCount = N;
     }
 
     private void showMatrix()
@@ -256,18 +283,19 @@ namespace GoldenRatioMethod
             }
             else
             {
-              Matrix[i, j] = Convert.ToDouble(dataGridView1.Rows[i].Cells[j].Value);
+              Function ParsFunction = new Function("f(x) = " + dataGridView1.Rows[i].Cells[j].Value);
+              Matrix[i, j] = ParsFunction.calculate();
             }
           }
         }
       }
       catch
       {
-        Console.WriteLine("wgerfvrgf234");
+        ex.showParseError();
       }
     }
 
-    private bool EmptyMatrix()
+    private bool notEmptyMatrix()
     {
       int countNull = 0;
       for(int i = 0; i < N; ++i)
@@ -279,6 +307,10 @@ namespace GoldenRatioMethod
             if (Convert.ToDouble(dataGridView1.Rows[i].Cells[j].Value) == 0d)
             {
               ++countNull;
+            }
+            if (dataGridView1.Rows[i].Cells[j].Value == "" || dataGridView1.Rows[i].Cells[j].Value == " ")
+            {
+              return false;
             }
           }
           catch
@@ -321,11 +353,11 @@ namespace GoldenRatioMethod
 
     private void calculation()
     {
-      if (setN() && EmptyMatrix())
+      if (setN() && notEmptyMatrix())
       {
+        ClearTimer();
         MatrixFromView();
         showConsoleMatrix();
-        dataGridView2.RowCount = N;
 
         if (checkBox1.Checked)
         {
@@ -388,6 +420,16 @@ namespace GoldenRatioMethod
       showMatrix();
       textBox1.Text = N.ToString();
       calculation();
+    }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
     }
   }
 }

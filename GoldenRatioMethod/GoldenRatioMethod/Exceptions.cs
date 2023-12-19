@@ -19,6 +19,7 @@ namespace GoldenRatioMethod
     private string StepsError = "Количество шагов указано неверно";
     private string CountStepsError = "Введено некорректное количество шагов";
     private string DimensionError = "Размерность матрицы указана неверно";
+    private string ParseError = "Ошибка при чтении данных";
 
 
     public void showPrecisionError()
@@ -72,6 +73,11 @@ namespace GoldenRatioMethod
     public void showDimensionError()
     {
       Console.WriteLine($"Ошибка: " + DimensionError);
+    }
+
+    public void showParseError()
+    {
+      Console.WriteLine($"Ошибка: " + ParseError);
     }
   }
 }
