@@ -333,6 +333,13 @@ namespace GoldenRatioMethod
       slae.Show();
     }
 
+    private void мНКToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      this.Close();
+      MHK mhk = new MHK(mainform);
+      mhk.Show();
+    }
+
     private void рассчитатьToolStripMenuItem_Click(object sender, EventArgs e)
     {
       panel4.Visible = true;

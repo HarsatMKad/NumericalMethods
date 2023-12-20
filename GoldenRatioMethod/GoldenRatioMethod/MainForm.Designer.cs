@@ -29,8 +29,8 @@ namespace GoldenRatioMethod
     /// </summary>
     private void InitializeComponent()
     {
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
       this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.label1 = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
@@ -66,6 +66,7 @@ namespace GoldenRatioMethod
       this.сортировкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.нахождениеЛогарифмаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.сЛАУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.мНКToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
       this.panel1.SuspendLayout();
       this.menuStrip1.SuspendLayout();
@@ -76,15 +77,15 @@ namespace GoldenRatioMethod
       // chart1
       // 
       this.chart1.BackColor = System.Drawing.Color.LightGray;
-      chartArea1.Name = "ChartArea1";
-      this.chart1.ChartAreas.Add(chartArea1);
+      chartArea2.Name = "ChartArea1";
+      this.chart1.ChartAreas.Add(chartArea2);
       this.chart1.Location = new System.Drawing.Point(397, 43);
       this.chart1.Name = "chart1";
-      series1.BorderWidth = 3;
-      series1.ChartArea = "ChartArea1";
-      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-      series1.Name = "Series1";
-      this.chart1.Series.Add(series1);
+      series2.BorderWidth = 3;
+      series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series2.Name = "Series1";
+      this.chart1.Series.Add(series2);
       this.chart1.Size = new System.Drawing.Size(600, 600);
       this.chart1.TabIndex = 0;
       this.chart1.Text = "chart1";
@@ -407,7 +408,8 @@ namespace GoldenRatioMethod
       this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сортировкиToolStripMenuItem,
             this.нахождениеЛогарифмаToolStripMenuItem,
-            this.сЛАУToolStripMenuItem});
+            this.сЛАУToolStripMenuItem,
+            this.мНКToolStripMenuItem});
       this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
       this.toolStripMenuItem1.Name = "toolStripMenuItem1";
       this.toolStripMenuItem1.Size = new System.Drawing.Size(143, 29);
@@ -434,6 +436,13 @@ namespace GoldenRatioMethod
       this.сЛАУToolStripMenuItem.Text = "СЛАУ";
       this.сЛАУToolStripMenuItem.Click += new System.EventHandler(this.сЛАУToolStripMenuItem_Click);
       // 
+      // мНКToolStripMenuItem
+      // 
+      this.мНКToolStripMenuItem.Name = "мНКToolStripMenuItem";
+      this.мНКToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+      this.мНКToolStripMenuItem.Text = "МНК";
+      this.мНКToolStripMenuItem.Click += new System.EventHandler(this.мНКToolStripMenuItem_Click);
+      // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,6 +456,7 @@ namespace GoldenRatioMethod
       this.MainMenuStrip = this.menuStrip1;
       this.Name = "MainForm";
       this.Text = "MainForm";
+      this.Load += new System.EventHandler(this.MainForm_Load);
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
@@ -498,5 +508,6 @@ namespace GoldenRatioMethod
     private System.Windows.Forms.ToolStripMenuItem сортировкиToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem нахождениеЛогарифмаToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem сЛАУToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem мНКToolStripMenuItem;
   }
 }

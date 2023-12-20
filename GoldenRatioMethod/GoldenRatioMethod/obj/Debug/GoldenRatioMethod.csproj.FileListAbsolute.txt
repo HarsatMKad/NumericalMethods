@@ -55,3 +55,4 @@ C:\Users\Harsat\source\repos\NumericalMethods\GoldenRatioMethod\GoldenRatioMetho
 C:\Users\Harsat\source\repos\NumericalMethods\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.csproj.CopyComplete
 C:\Users\Harsat\source\repos\NumericalMethods\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.exe
 C:\Users\Harsat\source\repos\NumericalMethods\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.pdb
+D:\Users\UPGRADE\Source\Repos\NumericalMethods\GoldenRatioMethod\GoldenRatioMethod\obj\Debug\GoldenRatioMethod.MHK.resources

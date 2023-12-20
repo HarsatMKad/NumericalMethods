@@ -28,13 +28,13 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
       this.panel4 = new System.Windows.Forms.Panel();
       this.textBox2 = new System.Windows.Forms.TextBox();
       this.label9 = new System.Windows.Forms.Label();
@@ -75,9 +75,10 @@
       this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.назадToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.нахождениеЛогарифмаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.сЛАУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.panel5 = new System.Windows.Forms.Panel();
       this.label13 = new System.Windows.Forms.Label();
-      this.сЛАУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.мНКToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.panel4.SuspendLayout();
       this.panel3.SuspendLayout();
       this.panel2.SuspendLayout();
@@ -348,37 +349,37 @@
       // 
       // chart1
       // 
-      chartArea2.Name = "ChartArea1";
-      this.chart1.ChartAreas.Add(chartArea2);
-      legend2.Name = "Legend1";
-      this.chart1.Legends.Add(legend2);
+      chartArea1.Name = "ChartArea1";
+      this.chart1.ChartAreas.Add(chartArea1);
+      legend1.Name = "Legend1";
+      this.chart1.Legends.Add(legend1);
       this.chart1.Location = new System.Drawing.Point(461, 36);
       this.chart1.Name = "chart1";
-      series6.ChartArea = "ChartArea1";
-      series6.Enabled = false;
-      series6.Legend = "Legend1";
-      series6.Name = "Пузыри";
-      series7.ChartArea = "ChartArea1";
-      series7.Enabled = false;
-      series7.Legend = "Legend1";
-      series7.Name = "Вставки";
-      series8.ChartArea = "ChartArea1";
-      series8.Enabled = false;
-      series8.Legend = "Legend1";
-      series8.Name = "Шейкер";
-      series9.ChartArea = "ChartArea1";
-      series9.Enabled = false;
-      series9.Legend = "Legend1";
-      series9.Name = "Быстрая";
-      series10.ChartArea = "ChartArea1";
-      series10.Enabled = false;
-      series10.Legend = "Legend1";
-      series10.Name = "BOGO";
-      this.chart1.Series.Add(series6);
-      this.chart1.Series.Add(series7);
-      this.chart1.Series.Add(series8);
-      this.chart1.Series.Add(series9);
-      this.chart1.Series.Add(series10);
+      series1.ChartArea = "ChartArea1";
+      series1.Enabled = false;
+      series1.Legend = "Legend1";
+      series1.Name = "Пузыри";
+      series2.ChartArea = "ChartArea1";
+      series2.Enabled = false;
+      series2.Legend = "Legend1";
+      series2.Name = "Вставки";
+      series3.ChartArea = "ChartArea1";
+      series3.Enabled = false;
+      series3.Legend = "Legend1";
+      series3.Name = "Шейкер";
+      series4.ChartArea = "ChartArea1";
+      series4.Enabled = false;
+      series4.Legend = "Legend1";
+      series4.Name = "Быстрая";
+      series5.ChartArea = "ChartArea1";
+      series5.Enabled = false;
+      series5.Legend = "Legend1";
+      series5.Name = "BOGO";
+      this.chart1.Series.Add(series1);
+      this.chart1.Series.Add(series2);
+      this.chart1.Series.Add(series3);
+      this.chart1.Series.Add(series4);
+      this.chart1.Series.Add(series5);
       this.chart1.Size = new System.Drawing.Size(430, 430);
       this.chart1.TabIndex = 17;
       this.chart1.Text = "Шейкер";
@@ -502,7 +503,8 @@
       this.назадToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.назадToolStripMenuItem1,
             this.нахождениеЛогарифмаToolStripMenuItem,
-            this.сЛАУToolStripMenuItem});
+            this.сЛАУToolStripMenuItem,
+            this.мНКToolStripMenuItem});
       this.назадToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
       this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
       this.назадToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
@@ -522,6 +524,13 @@
       this.нахождениеЛогарифмаToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
       this.нахождениеЛогарифмаToolStripMenuItem.Text = "Нахождение интеграла";
       this.нахождениеЛогарифмаToolStripMenuItem.Click += new System.EventHandler(this.нахождениеЛогарифмаToolStripMenuItem_Click);
+      // 
+      // сЛАУToolStripMenuItem
+      // 
+      this.сЛАУToolStripMenuItem.Name = "сЛАУToolStripMenuItem";
+      this.сЛАУToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+      this.сЛАУToolStripMenuItem.Text = "СЛАУ";
+      this.сЛАУToolStripMenuItem.Click += new System.EventHandler(this.сЛАУToolStripMenuItem_Click);
       // 
       // panel5
       // 
@@ -543,12 +552,12 @@
       this.label13.TabIndex = 36;
       this.label13.Text = "Загрузка...";
       // 
-      // сЛАУToolStripMenuItem
+      // мНКToolStripMenuItem
       // 
-      this.сЛАУToolStripMenuItem.Name = "сЛАУToolStripMenuItem";
-      this.сЛАУToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
-      this.сЛАУToolStripMenuItem.Text = "СЛАУ";
-      this.сЛАУToolStripMenuItem.Click += new System.EventHandler(this.сЛАУToolStripMenuItem_Click);
+      this.мНКToolStripMenuItem.Name = "мНКToolStripMenuItem";
+      this.мНКToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+      this.мНКToolStripMenuItem.Text = "МНК";
+      this.мНКToolStripMenuItem.Click += new System.EventHandler(this.мНКToolStripMenuItem_Click);
       // 
       // Sorting
       // 
@@ -633,5 +642,6 @@
     private System.Windows.Forms.Panel panel5;
     private System.Windows.Forms.Label label13;
     private System.Windows.Forms.ToolStripMenuItem сЛАУToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem мНКToolStripMenuItem;
   }
 }

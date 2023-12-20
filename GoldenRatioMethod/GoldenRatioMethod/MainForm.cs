@@ -410,6 +410,18 @@ namespace GoldenRatioMethod
 
     }
 
+    private void MainForm_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void мНКToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      MHK mhk = new MHK(this);
+      this.Hide();
+      mhk.Show();
+    }
+
     private void label2_Click(object sender, EventArgs e)
     {
 

@@ -505,5 +505,12 @@ namespace GoldenRatioMethod
       SLAE slae = new SLAE(mainform);
       slae.Show();
     }
+
+    private void мНКToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      this.Close();
+      MHK mhk = new MHK(mainform);
+      mhk.Show();
+    }
   }
 }

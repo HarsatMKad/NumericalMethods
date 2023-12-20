@@ -28,12 +28,14 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
       this.menuStrip2 = new System.Windows.Forms.MenuStrip();
       this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.назадToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.нахождениеЛогарифмаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.сЛАУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.мНКToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
       this.рассчитатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +69,6 @@
       this.textBox7 = new System.Windows.Forms.TextBox();
       this.label13 = new System.Windows.Forms.Label();
       this.panel4 = new System.Windows.Forms.Panel();
-      this.сЛАУToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.menuStrip2.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
       this.menuStrip1.SuspendLayout();
@@ -95,7 +96,8 @@
       this.назадToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.назадToolStripMenuItem1,
             this.нахождениеЛогарифмаToolStripMenuItem,
-            this.сЛАУToolStripMenuItem});
+            this.сЛАУToolStripMenuItem,
+            this.мНКToolStripMenuItem});
       this.назадToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
       this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
       this.назадToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
@@ -115,18 +117,32 @@
       this.нахождениеЛогарифмаToolStripMenuItem.Text = "Сортировки";
       this.нахождениеЛогарифмаToolStripMenuItem.Click += new System.EventHandler(this.нахождениеЛогарифмаToolStripMenuItem_Click);
       // 
+      // сЛАУToolStripMenuItem
+      // 
+      this.сЛАУToolStripMenuItem.Name = "сЛАУToolStripMenuItem";
+      this.сЛАУToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
+      this.сЛАУToolStripMenuItem.Text = "СЛАУ";
+      this.сЛАУToolStripMenuItem.Click += new System.EventHandler(this.сЛАУToolStripMenuItem_Click);
+      // 
+      // мНКToolStripMenuItem
+      // 
+      this.мНКToolStripMenuItem.Name = "мНКToolStripMenuItem";
+      this.мНКToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
+      this.мНКToolStripMenuItem.Text = "МНК";
+      this.мНКToolStripMenuItem.Click += new System.EventHandler(this.мНКToolStripMenuItem_Click);
+      // 
       // chart1
       // 
       this.chart1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-      chartArea3.Name = "ChartArea1";
-      this.chart1.ChartAreas.Add(chartArea3);
+      chartArea2.Name = "ChartArea1";
+      this.chart1.ChartAreas.Add(chartArea2);
       this.chart1.Location = new System.Drawing.Point(397, 41);
       this.chart1.Name = "chart1";
-      series3.BorderWidth = 3;
-      series3.ChartArea = "ChartArea1";
-      series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-      series3.Name = "Series1";
-      this.chart1.Series.Add(series3);
+      series2.BorderWidth = 3;
+      series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series2.Name = "Series1";
+      this.chart1.Series.Add(series2);
       this.chart1.Size = new System.Drawing.Size(600, 600);
       this.chart1.TabIndex = 24;
       this.chart1.Text = "chart1";
@@ -240,7 +256,7 @@
       this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
       this.label2.Location = new System.Drawing.Point(65, 58);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(50, 76);
+      this.label2.Size = new System.Drawing.Size(51, 76);
       this.label2.TabIndex = 28;
       this.label2.Text = "∫";
       // 
@@ -475,13 +491,6 @@
       this.panel4.TabIndex = 37;
       this.panel4.Visible = false;
       // 
-      // сЛАУToolStripMenuItem
-      // 
-      this.сЛАУToolStripMenuItem.Name = "сЛАУToolStripMenuItem";
-      this.сЛАУToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
-      this.сЛАУToolStripMenuItem.Text = "СЛАУ";
-      this.сЛАУToolStripMenuItem.Click += new System.EventHandler(this.сЛАУToolStripMenuItem_Click);
-      // 
       // FindIntegral
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,5 +566,6 @@
     private System.Windows.Forms.TextBox textBox8;
     private System.Windows.Forms.TextBox textBox9;
     private System.Windows.Forms.ToolStripMenuItem сЛАУToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem мНКToolStripMenuItem;
   }
 }
